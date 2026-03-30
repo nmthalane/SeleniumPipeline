@@ -18,10 +18,5 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Install Chrome
-        run: |
-            sudo apt update
-            sudo apt install -y google-chrome-stable
-
       - name: Build and Run Tests
         run: mvn clean test -Dheadless=true
