@@ -23,5 +23,5 @@ jobs:
             sudo apt update
             sudo apt install -y google-chrome-stable
 
-            - name: Build and Run Tests
-              run: mvn clean test -Dheadless=true
+      - name: Build and Run Tests
+        run: mvn clean test -Dheadless=true
