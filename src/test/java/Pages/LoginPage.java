@@ -25,6 +25,10 @@ public class LoginPage {
     @FindBy(id = "login-submit")
     WebElement submitButton;
 
+    public LoginPage(WebDriver driver) {
+        this.driver = driver;
+    }
+
 
     public void verifyLoginPageIsDisplayed(){
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(visibilityOf(verifyLoginHeading));
