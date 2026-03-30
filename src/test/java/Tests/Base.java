@@ -15,13 +15,11 @@ public class Base {
     protected LoginPage loginPage;
     protected TakeScreenshots takeScreenshots;
 
-    BrowserFactory browserFactory = new BrowserFactory();
-
     @BeforeClass
     public void setUp() {
         boolean headless = Boolean.parseBoolean(System.getProperty("headless", "true"));
 
-        driver = browserFactory.startBrowser("chrome","https://ndosisimplifiedautomation.vercel.app/",headless);
+        driver = BrowserFactory.startBrowser("chrome","https://ndosisimplifiedautomation.vercel.app/",headless);
 
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
